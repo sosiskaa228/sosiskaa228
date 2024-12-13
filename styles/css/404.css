@@ -1,0 +1,84 @@
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  src: url(../../fonts/Poppins/Poppins-Black.ttf);
+}
+@font-face {
+  font-family: "Volkhov";
+  font-style: normal;
+  src: url(../../fonts/Volkhov/Volkhov-Bold.ttf);
+}
+html,
+body {
+  overflow-x: hidden;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 109vh;
+  text-align: center;
+}
+.page__title {
+  margin: 0;
+  color: rgb(0, 0, 0);
+  font-family: Poppins;
+  font-size: 64px;
+  font-weight: 400;
+}
+.page__description {
+  margin: 0;
+  color: rgb(0, 0, 0);
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 77px;
+}
+.page__image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 77px;
+}
+.page__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page__code {
+  font-size: 5rem;
+}
+.page__link {
+  color: rgb(0, 0, 0);
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.page__link:hover {
+  text-decoration: underline;
+}
+.page__icon {
+  margin-right: 15px;
+}
+
+@media (max-width: 768px) {
+  .page__img {
+    width: 70vw;
+  }
+  .page__title {
+    font-size: 2rem;
+  }
+  .page__description {
+    font-size: 1rem;
+  }
+  .page__code {
+    font-size: 4rem;
+  }
+}/*# sourceMappingURL=404.css.map */

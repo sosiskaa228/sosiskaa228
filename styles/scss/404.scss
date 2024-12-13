@@ -1,0 +1,94 @@
+@import "_vars";
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  src: url(../../fonts/Poppins/Poppins-Black.ttf);
+}
+@font-face {
+  font-family: "Volkhov";
+  font-style: normal;
+  src: url(../../fonts/Volkhov/Volkhov-Bold.ttf);
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 109vh;
+  text-align: center;
+
+  &__title {
+    margin: 0;
+    color: $fourth-color;
+    font-family: $first-font;
+    font-size: 64px;
+    font-weight: $regular-weight;
+  }
+
+  &__description {
+    margin: 0;
+    color: $fourth-color;
+    font-family: $first-font;
+    font-size: 24px;
+    font-weight: $regular-weight;
+    margin-bottom: 77px;
+  }
+
+  &__image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 77px;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__code {
+    font-size: 5rem;
+  }
+
+  &__link {
+    color: $fourth-color;
+    font-family: $first-font;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: $regular-weight;
+    line-height: normal;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__icon {
+    margin-right: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .page {
+    &__img {
+      width: 70vw;
+    }
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__description {
+      font-size: 1rem;
+    }
+
+    &__code {
+      font-size: 4rem;
+    }
+  }
+}
