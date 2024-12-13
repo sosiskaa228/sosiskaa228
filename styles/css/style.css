@@ -626,7 +626,7 @@ body {
 .main-subscription__input {
   width: 367px;
   padding: 21px 0px 18px 68px;
-  background-image: url("/проект/images/email.svg");
+  background-image: url("../../images/email.svg");
   background-repeat: no-repeat;
   background-position: 32px center;
   border-radius: 10px;
