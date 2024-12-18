@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "Poppins";
   font-style: normal;
@@ -1441,6 +1440,20 @@ body {
     width: 19vw;
     padding: 1vw;
   }
+  .button_big:hover {
+    background-color: rgb(241, 165, 1);
+  }
+  .button_big:active {
+    box-shadow: none;
+  }
+  .button_small:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(33, 40, 50);
+    border: 1px solid rgb(33, 40, 50);
+  }
+  .button_small:active {
+    box-shadow: none;
+  }
   .trip-card {
     flex-direction: column;
     align-items: flex-start;
@@ -1473,6 +1486,9 @@ body {
   }
   .trip-card__icon-city {
     width: 3vw;
+  }
+  .main-cards__card {
+    box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.02), 0px 64.815px 46.852px 0px rgba(0, 0, 0, 0.02), 0px 38.519px 25.481px 0px rgba(0, 0, 0, 0.01), 0px 20px 13px 0px rgba(0, 0, 0, 0.01), 0px 8.148px 6.519px 0px rgba(0, 0, 0, 0.01), 0px 1.852px 3.148px 0px rgba(0, 0, 0, 0);
   }
   .main-content {
     margin-bottom: 9vw;
@@ -1514,6 +1530,9 @@ body {
     font-size: 0.6rem;
     padding: 1vw 0.8vw;
   }
+  .main-subscription__button:hover {
+    background: var(--gradient, linear-gradient(180deg, #ff946d 0%, #ff7d68 100%));
+  }
   .main-subscription__input {
     padding: 2vw 0vw 2vw 7vw;
     background-size: 2vw;
@@ -1549,6 +1568,9 @@ body {
     align-items: center;
     gap: 4vw;
   }
+  .main-steps__step-title {
+    margin-top: 2vw;
+  }
   .main-steps__step-description {
     width: 52vw;
     text-align: justify;
@@ -1573,7 +1595,8 @@ body {
     width: 10vw;
   }
   .button_big {
-    font-size: 0.5rem;
+    font-size: 0.65rem;
+    width: 20vw;
   }
   .container {
     max-width: 78vw;
@@ -1589,7 +1612,7 @@ body {
     align-items: flex-end;
   }
   .trip-card__status, .trip-card__next-trip, .trip-card__completion {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
   .trip-card__favorite:hover .trip-card__favorite-overlay {
     flex-direction: row-reverse;
@@ -1621,10 +1644,10 @@ body {
     flex-wrap: wrap;
   }
   .footer__title {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
   }
   .footer__link {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
   }
   .footer__bottom {
     font-size: 0.5rem;
@@ -1682,8 +1705,9 @@ body {
     font-size: 1rem;
   }
   .main-testimonials__review {
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 5vw;
+    width: 65vw;
   }
   .main-testimonials__info-title {
     font-size: 0.8rem;
@@ -1692,18 +1716,37 @@ body {
     width: 63vw;
   }
   .main-steps__step-title {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    margin-bottom: 3vw;
+    margin-top: 0;
   }
   .main-steps__step-description {
-    font-size: 1rem;
+    font-size: 1.1rem;
     width: 63vw;
   }
   .main-steps__step-description:hover {
+    font-weight: 400;
     width: 63vw;
   }
   .main-steps__icon {
-    width: 9vw;
-    height: 9vw;
+    width: 9.5vw;
+    height: 9.5vw;
+  }
+  .main-steps__icon-image {
+    width: 5vw;
+    height: 5vw;
+  }
+  .main-steps__icon_destination:hover {
+    transform: none;
+    background: #f0bb1f;
+  }
+  .main-steps__icon_payment:hover {
+    transform: none;
+    background: #f15a2b;
+  }
+  .main-steps__icon_airport:hover {
+    transform: none;
+    background: #006380;
   }
   .main-steps__wrapper {
     align-items: center;
@@ -1761,18 +1804,21 @@ body {
     width: 74vw;
   }
   .main-subscription__title {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
   .main-content__title {
-    font-size: 2rem;
+    font-size: 2.2rem;
     width: 66vw;
+    margin-bottom: 2.2vw;
   }
   .main-content__text_big {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
+    margin-bottom: 2vw;
   }
   .main-content__text_small {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     line-height: 4vw;
+    margin-bottom: 2vw;
   }
   .main-subscription__input {
     width: 40vw;
@@ -1799,6 +1845,33 @@ body {
     font-size: 0.6rem;
     width: 25vw;
     padding: 2vw;
+  }
+  .footer__bottom {
+    font-size: 0.7rem;
+  }
+  .footer__wrapper {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__access {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  .footer__access-title {
+    font-size: 0.7rem;
+  }
+  .footer__info {
+    gap: 10vw;
+  }
+  .footer__contacts-img {
+    width: 7vw;
+  }
+  .footer__app-action {
+    font-size: 0.5rem;
+  }
+  .footer__app-source {
+    font-size: 0.5rem;
   }
   .logo {
     width: 15vw;
@@ -1827,39 +1900,48 @@ body {
   .main-testimonials__scroll-img {
     width: 2.5vw;
   }
+  .main-testimonials__user-img {
+    width: 14vw;
+  }
   .main-testimonials__recall {
     padding: 6vw;
   }
   .main-testimonials__review {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+    text-align: justify;
   }
   .main-testimonials__name {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
   .main-testimonials__location {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
   .main-testimonials__info-title {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
+    margin-bottom: 2vw;
   }
   .main-testimonials__info-text {
     font-size: 1.4rem;
   }
   .main-steps__step-title {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .main-steps__step-description {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   .main-steps__title {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
   .main-steps__subtitle {
     font-size: 1.4rem;
     width: 69vw;
   }
   .main-subscription__title {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
+    margin-bottom: 2vw;
+  }
+  .main-subscription__form {
+    gap: 3vw;
   }
   .main-destinations__list {
     gap: 5vw;
@@ -1874,7 +1956,7 @@ body {
     font-size: 0.8rem;
   }
   .main-destinations__text {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
   .main-destinations__title {
     font-size: 1.4rem;
@@ -1882,10 +1964,11 @@ body {
   }
   .main-cards__card {
     width: 60vw;
-    box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.02), 0px 64.815px 46.852px 0px rgba(0, 0, 0, 0.02), 0px 38.519px 25.481px 0px rgba(0, 0, 0, 0.01), 0px 20px 13px 0px rgba(0, 0, 0, 0.01), 0px 8.148px 6.519px 0px rgba(0, 0, 0, 0.01), 0px 1.852px 3.148px 0px rgba(0, 0, 0, 0);
+    padding: 3vw 3vw 10vw 3vw;
   }
   .main-cards__card-text {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    width: 55vw;
   }
   .main-cards__card-image {
     width: 16vw;
@@ -1899,12 +1982,16 @@ body {
     width: 78vw;
   }
   .main-content__text_small {
-    font-size: 0.6rem;
-    width: 80vw;
+    font-size: 0.7rem;
+    width: 68vw;
+  }
+  .main-content__text_big {
+    font-size: 0.7rem;
   }
   .main-content__title {
     font-size: 1.8rem;
-    width: 80vw;
+    width: 72vw;
     line-height: 8vw;
+    margin-bottom: 2.4vw;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -627,7 +627,7 @@ body {
   &__input {
     width: 367px;
     padding: 21px 0px 18px 68px;
-    background-image: url("/проект/images/email.svg");
+    background-image: url("../../images/email.svg");
     background-repeat: no-repeat;
     background-position: 32px center;
     border-radius: 10px;
@@ -1534,6 +1534,22 @@ body {
       font-size: 0.8rem;
       width: 19vw;
       padding: 1vw;
+      &:hover {
+        background-color: rgb(241, 165, 1);
+      }
+      &:active {
+        box-shadow: none;
+      }
+    }
+    &_small {
+      &:hover {
+        background-color: $second-color;
+        color: $first-color;
+        border: 1px solid $first-color;
+      }
+      &:active {
+        box-shadow: none;
+      }
     }
   }
   .trip-card {
@@ -1572,6 +1588,16 @@ body {
     }
   }
   .main {
+    &-cards {
+      &__card {
+        box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.02),
+          0px 64.815px 46.852px 0px rgba(0, 0, 0, 0.02),
+          0px 38.519px 25.481px 0px rgba(0, 0, 0, 0.01),
+          0px 20px 13px 0px rgba(0, 0, 0, 0.01),
+          0px 8.148px 6.519px 0px rgba(0, 0, 0, 0.01),
+          0px 1.852px 3.148px 0px rgba(0, 0, 0, 0);
+      }
+    }
     &-content {
       margin-bottom: 9vw;
       &__title {
@@ -1616,6 +1642,12 @@ body {
         width: 15vw;
         font-size: 0.6rem;
         padding: 1vw 0.8vw;
+        &:hover {
+          background: var(
+            --gradient,
+            linear-gradient(180deg, #ff946d 0%, #ff7d68 100%)
+          );
+        }
       }
       &__input {
         padding: 2vw 0vw 2vw 7vw;
@@ -1655,6 +1687,9 @@ body {
         display: flex;
         align-items: center;
         gap: 4vw;
+        &-title {
+          margin-top: 2vw;
+        }
         &-description {
           width: 52vw;
           text-align: justify;
@@ -1683,10 +1718,10 @@ body {
   }
   .button {
     &_big {
-      font-size: 0.5rem;
+      font-size: 0.65rem;
+      width: 20vw;
     }
   }
-
   .container {
     max-width: calc(100vw - 22vw);
   }
@@ -1704,7 +1739,7 @@ body {
     &__status,
     &__next-trip,
     &__completion {
-      font-size: 0.6rem;
+      font-size: 0.7rem;
     }
     &__favorite:hover .trip-card__favorite-overlay {
       flex-direction: row-reverse;
@@ -1742,10 +1777,10 @@ body {
       flex-wrap: wrap;
     }
     &__title {
-      font-size: 0.5rem;
+      font-size: 0.7rem;
     }
     &__link {
-      font-size: 0.5rem;
+      font-size: 0.6rem;
     }
     &__bottom {
       font-size: 0.5rem;
@@ -1811,8 +1846,9 @@ body {
         font-size: 1rem;
       }
       &__review {
-        font-size: 0.9rem;
+        font-size: 1rem;
         line-height: 5vw;
+        width: 65vw;
       }
       &__info {
         &-title {
@@ -1826,19 +1862,44 @@ body {
       }
       &__step {
         &-title {
-          font-size: 1.2rem;
+          font-size: 1.4rem;
+          margin-bottom: 3vw;
+          margin-top: 0;
         }
         &-description {
-          font-size: 1rem;
+          font-size: 1.1rem;
           width: 63vw;
           &:hover {
+            font-weight: $regular-weight;
             width: 63vw;
           }
         }
       }
       &__icon {
-        width: 9vw;
-        height: 9vw;
+        width: 9.5vw;
+        height: 9.5vw;
+        &-image {
+          width: 5vw;
+          height: 5vw;
+        }
+        &_destination {
+          &:hover {
+            transform: none;
+            background: #f0bb1f;
+          }
+        }
+        &_payment {
+          &:hover {
+            transform: none;
+            background: #f15a2b;
+          }
+        }
+        &_airport {
+          &:hover {
+            transform: none;
+            background: #006380;
+          }
+        }
       }
       &__wrapper {
         align-items: center;
@@ -1907,21 +1968,24 @@ body {
     }
     &-subscription {
       &__title {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
       }
     }
     &-content {
       &__title {
-        font-size: 2rem;
+        font-size: 2.2rem;
         width: 66vw;
+        margin-bottom: 2.2vw;
       }
       &__text {
         &_big {
-          font-size: 0.6rem;
+          font-size: 0.8rem;
+          margin-bottom: 2vw;
         }
         &_small {
-          font-size: 0.6rem;
+          font-size: 0.8rem;
           line-height: 4vw;
+          margin-bottom: 2vw;
         }
       }
     }
@@ -1954,6 +2018,37 @@ body {
       font-size: 0.6rem;
       width: 25vw;
       padding: 2vw;
+    }
+  }
+  .footer {
+    &__bottom {
+      font-size: 0.7rem;
+    }
+    &__wrapper {
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__access {
+      flex-wrap: nowrap;
+      flex-direction: column;
+      &-title {
+        font-size: 0.7rem;
+      }
+    }
+    &__info {
+      gap: 10vw;
+    }
+    &__contacts-img {
+      width: 7vw;
+    }
+    &__app {
+      &-action {
+        font-size: 0.5rem;
+      }
+      &-source {
+        font-size: 0.5rem;
+      }
     }
   }
   .logo {
@@ -1991,21 +2086,28 @@ body {
           width: 2.5vw;
         }
       }
+      &__user {
+        &-img {
+          width: 14vw;
+        }
+      }
       &__recall {
         padding: 6vw;
       }
       &__review {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
+        text-align: justify;
       }
       &__name {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
       }
       &__location {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
       }
       &__info {
         &-title {
-          font-size: 0.6rem;
+          font-size: 0.7rem;
+          margin-bottom: 2vw;
         }
         &-text {
           font-size: 1.4rem;
@@ -2015,14 +2117,14 @@ body {
     &-steps {
       &__step {
         &-title {
-          font-size: 1rem;
+          font-size: 1.2rem;
         }
         &-description {
-          font-size: 0.8rem;
+          font-size: 0.9rem;
         }
       }
       &__title {
-        font-size: 0.6rem;
+        font-size: 0.7rem;
       }
       &__subtitle {
         font-size: 1.4rem;
@@ -2031,7 +2133,11 @@ body {
     }
     &-subscription {
       &__title {
-        font-size: 0.6rem;
+        font-size: 0.7rem;
+        margin-bottom: 2vw;
+      }
+      &__form {
+        gap: 3vw;
       }
     }
     &-destinations {
@@ -2050,7 +2156,7 @@ body {
         font-size: 0.8rem;
       }
       &__text {
-        font-size: 0.6rem;
+        font-size: 0.7rem;
       }
       &__title {
         font-size: 1.4rem;
@@ -2060,14 +2166,10 @@ body {
     &-cards {
       &__card {
         width: 60vw;
-        box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.02),
-          0px 64.815px 46.852px 0px rgba(0, 0, 0, 0.02),
-          0px 38.519px 25.481px 0px rgba(0, 0, 0, 0.01),
-          0px 20px 13px 0px rgba(0, 0, 0, 0.01),
-          0px 8.148px 6.519px 0px rgba(0, 0, 0, 0.01),
-          0px 1.852px 3.148px 0px rgba(0, 0, 0, 0);
+        padding: 3vw 3vw 10vw 3vw;
         &-text {
-          font-size: 0.8rem;
+          font-size: 0.9rem;
+          width: 55vw;
         }
         &-image {
           width: 16vw;
@@ -2085,14 +2187,18 @@ body {
     &-content {
       &__text {
         &_small {
-          font-size: 0.6rem;
-          width: 80vw;
+          font-size: 0.7rem;
+          width: 68vw;
+        }
+        &_big {
+          font-size: 0.7rem;
         }
       }
       &__title {
         font-size: 1.8rem;
-        width: 80vw;
+        width: 72vw;
         line-height: 8vw;
+        margin-bottom: 2.4vw;
       }
     }
   }
