@@ -261,10 +261,8 @@ body {
     border-radius: 24px 24px 0px 0px;
     width: 314px;
     height: 327px;
-    overflow: hidden;
     object-fit: cover;
     transition: transform 0.3s ease, z-index 0.3s ease;
-    z-index: 1;
   }
   &__info {
     display: grid;
@@ -583,7 +581,6 @@ body {
     width: 243px;
     height: 65px;
     border-radius: 10px;
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -783,7 +780,7 @@ body {
     }
   }
   &__bottom {
-    color: var(--TEXT-CLR, #5e6282);
+    color: $third-color;
     font-family: $first-font;
     font-size: $small-size;
     font-weight: $medium-weight;
